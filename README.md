@@ -1,1 +1,1 @@
-# Agile Challengers - Creation a Presurgical Epilepsy Evaluation Platform
+# Agile Challengers : Creation Presurgical Epilepsy Evaluation Platform
