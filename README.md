@@ -1,5 +1,7 @@
 # Agile Challengers : Creation Presurgical Epilepsy Evaluation Platform
 
+The primary objective of the project is to create a web application that provides neurosurgeons with an easy-to-use interface for interacting with three-dimensional patient brain models. Surgeons can handle and analyze complex anatomical components with greater precision by using modern 3D modeling technology, which improves pre-operative planning and eventually results in better surgical outcomes.
+
 <h1>Table of Content</h1>
 
 - [Introduction](#introduction)
@@ -9,6 +11,9 @@
 - [Contributors](#contributors)
 
 ## Introduction
+---
+
+
 ## Technology Stack
 ## Installations and Running
 ## References
