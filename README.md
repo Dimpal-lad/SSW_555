@@ -4,7 +4,7 @@ This project aims to develop a cutting-edge web application designed to revoluti
 
 
 <p>
-<img src = "main.PNG">
+<img src = "main.png">
 </p>
 
 <h1>Table of Content</h1>
