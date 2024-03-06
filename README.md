@@ -1,21 +1,28 @@
 # Agile Challengers : Creation Presurgical Epilepsy Evaluation Platform
 
-The primary objective of the project is to create a web application that provides neurosurgeons with an easy-to-use interface for interacting with three-dimensional patient brain models. Surgeons can handle and analyze complex anatomical components with greater precision by using modern 3D modeling technology, which improves pre-operative planning and eventually results in better surgical outcomes.
+This project aims to develop a cutting-edge web application designed to revolutionize the way surgeons prepare for and execute neurosurgical procedures. By leveraging advanced 3D modeling technology, the platform will allow medical professionals to interact with and visualize patients' brain models in three dimensions, offering unprecedented insight and precision in pre-surgical planning. Additionally, the project encompasses the creation of comprehensive, step-by-step deployment documentation to ensure seamless setup, configuration, and utilization of the platform by healthcare institutions and professionals.
 
 <h1>Table of Content</h1>
 
-- [Introduction](#introduction)
+- [Objective](#objective)
 - [Technology Stack](#technology-stack)
-- [Installations and Running](#installations-and-running)
 - [References](#references)
 - [Contributors](#contributors)
 
-## Introduction
+## Objective
 ---
+Develop a presurgical epilepsy evaluation platform that uses deep learning algorithms with EEG source imaging to accurately localize epileptogenic regions and provide a user friendly 3D visualization for better surgical planning and patient outcomes.
 
 
 ## Technology Stack
-## Installations and Running
+---
+
+- React - Fronted Framework
+- MNE Python - Backend Framework
+- MongoDb - Database
+- Amazon Web Service (AWS) - Cloud Storage
+- Postman - API Testing
+- Selenium, Junit - Software Testing
 ## References
 1. [EEG Source Imaging: A Practical Review of the Analysis Steps](https://www.frontiersin.org/articles/10.3389/fneur.2019.00325/full)
 2. [ConvDip: A Convolutional Neural Network for Better EEG Source Imaging](https://www.frontiersin.org/articles/10.3389/fnins.2021.569918/full)
