@@ -4,8 +4,8 @@ This project aims to develop a cutting-edge web application designed to revoluti
 
 
 <p>
-  <img src="EEG.png" width="400" height="250">
-  <img src="EEG2.png" width="400" height="250">
+  <img src="EEG.png" width="500" height="250"style="margin-right: 20px;">
+  <img src="EEG2.png" width="500" height="250">
 </p>
 
 <h1>Table of Content</h1>
