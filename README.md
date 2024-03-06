@@ -2,6 +2,11 @@
 
 This project aims to develop a cutting-edge web application designed to revolutionize the way surgeons prepare for and execute neurosurgical procedures. By leveraging advanced 3D modeling technology, the platform will allow medical professionals to interact with and visualize patients' brain models in three dimensions, offering unprecedented insight and precision in pre-surgical planning. Additionally, the project encompasses the creation of comprehensive, step-by-step deployment documentation to ensure seamless setup, configuration, and utilization of the platform by healthcare institutions and professionals.
 
+
+<p>
+<img src = "main.PNG">
+</p>
+
 <h1>Table of Content</h1>
 
 - [Objective](#objective)
@@ -19,7 +24,7 @@ Develop a presurgical epilepsy evaluation platform that uses deep learning algor
 
 - React - Fronted Framework
 - MNE Python - Backend Framework
-- MongoDb - Database
+- MongoDB - Database
 - Amazon Web Service (AWS) - Cloud Storage
 - Postman - API Testing
 - Selenium, Junit - Software Testing
@@ -34,4 +39,4 @@ Develop a presurgical epilepsy evaluation platform that uses deep learning algor
 
 ## Contributors
 ---
-[Bhumiti Gohel](https://github.com/bhumiti28) | [Dimpal Lad](https://github.com/Dimpal-lad) | [Krinal Akabari](https://github.com/Krinal-Akbari) | [Rinjal Patel](https://github.com/RinjalPatel490) | [Yash Soni](https://github.com/Yash55133)
+[Bhumiti Gohel](https://github.com/bhumiti28) | [Dimpal Lad](https://github.com/Dimpal-lad) | [Krinal Akbari](https://github.com/Krinal-Akbari) | [Rinjal Patel](https://github.com/RinjalPatel490) | [Yash Soni](https://github.com/Yash55133)
