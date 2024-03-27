@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
 function Navigation() {
   return (
     <nav>
       <button>My Profile</button>
-      <a href='/LoginSignUp'><button>Login</button></a>
+      <a href="/Login">
+        <button>Login</button>
+      </a>
       <button>Logout</button> {/* Future database redirection */}
     </nav>
   );
