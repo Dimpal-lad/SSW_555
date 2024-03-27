@@ -8,10 +8,10 @@ import SignUp from "./components/UserManagement/SignUp";
 const App = () => {
   return (
     <div className="App">
-      {/* <Navigation />
-      <BrainModel /> */}
+      <Navigation />
+      <BrainModel />
       {/* <Login/> */}
-      <SignUp />
+      {/* <SignUp /> */}
     </div>
   );
 };

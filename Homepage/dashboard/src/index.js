@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import BrainModel from "./BrainModel";
 import Login from "./components/UserManagement/Login";
 import SignUp from "./components/UserManagement/SignUp";
+import BrainView from "./components/Brain_Visualization/BrainView";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "BrainModel",
     element: <BrainModel />,
+  },
+  {
+    path: "/brain-view",
+    element: <BrainView />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
