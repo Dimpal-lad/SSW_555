@@ -8,6 +8,7 @@ import BrainModel from "./BrainModel";
 import Login from "./components/UserManagement/Login";
 import SignUp from "./components/UserManagement/SignUp";
 import BrainView from "./components/Brain_Visualization/BrainView";
+import BrainViewer from "./components/Brain_Visualization/BrainViewer";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/brain-view",
     element: <BrainView />,
+  },
+  {
+    path: "/brain",
+    element: <BrainViewer />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));

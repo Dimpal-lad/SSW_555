@@ -6,8 +6,8 @@ const BrainView = () => {
   return (
     <div>
       <h1>Brain View</h1>
-      {/* <BrainSurface /> */}
-      <BrainData/>
+      <BrainSurface />
+      {/* <BrainData/> */}
     </div>
   );
 };
