@@ -48,14 +48,10 @@ const Login = () => {
               </div>
               <div className="input">
                 <img src={password_icon} alt="" />
-                <Field
-                  type="password"
-                  placeholder="Password"
-                  name="password"
-                />
+                <Field type="password" placeholder="Password" name="password" />
               </div>
               <div className="inputerror">
-                <ErrorMessage name="password" className="error" />
+                <ErrorMessage name="password" className="input error" />
               </div>
             </div>
             <div className="submit-container">
