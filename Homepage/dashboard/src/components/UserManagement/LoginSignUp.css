@@ -64,6 +64,7 @@
     display: flex;
     align-items:flex-start;
     margin-left: 60px;
+    color: red;
 }
 
 .input img{
