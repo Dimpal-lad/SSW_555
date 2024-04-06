@@ -2,15 +2,20 @@ import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 
-export default function Model(props) {
+export default function Model({ rotationAxis }) {
   const { nodes, materials } = useGLTF("/brain.gltf");
   const brainRef = useRef();
+
   useFrame((state, delta) => {
-    brainRef.current.rotation.y += delta;
+    if (rotationAxis === "auto") {
+      brainRef.current.rotation.y += delta;
+    } else if (rotationAxis) {
+      brainRef.current.rotation[rotationAxis] += delta;
+    }
   });
 
   return (
-    <group {...props} dispose={null}>
+    <group dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <mesh
           geometry={nodes.defaultMaterial.geometry}
