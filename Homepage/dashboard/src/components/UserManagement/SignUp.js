@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import user_icon from "../Assets/person.png";
 import email_icon from "../Assets/email.png";
 import password_icon from "../Assets/password.png";
+import { supabase } from './supabaseClient';
 
 const SignUp = () => {
   const initialValues = {
@@ -23,8 +24,22 @@ const SignUp = () => {
       .required("Password is required"),
   });
 
-  const onSubmit = (values, props) => {
-    console.log(values);
+  const onSubmit = async (values, props) => {
+    const { emailId, password } = values;
+
+    const { user, error } = await supabase.auth.signUp({
+      email: emailId,
+      password,
+    });
+
+    if (error) {
+      console.error('Signup error', error.message);
+      // Optionally, update your state or UI to reflect the error
+    } else {
+      console.log('Signup successful', user);
+      // Redirect user or update app state as needed
+    }
+
     props.resetForm();
   };
 
