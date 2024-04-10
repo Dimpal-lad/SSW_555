@@ -4,7 +4,7 @@ import { Form, Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import email_icon from "../Assets/email.png";
 import password_icon from "../Assets/password.png";
-
+import { supabase } from './supabaseClient'; 
 const Login = () => {
   const initialValues = {
     emailId: "",
@@ -20,8 +20,22 @@ const Login = () => {
       .required("Password is required"),
   });
 
-  const onSubmit = (values, props) => {
-    console.log(values);
+  const onSubmit = async (values, props) => {
+    const { emailId, password } = values;
+
+    const { error } = await supabase.auth.signIn({
+      email: emailId,
+      password,
+    });
+
+    if (error) {
+      console.error('Login error', error.message);
+      // Optionally, update your state or UI to reflect the error
+    } else {
+      console.log('Login successful');
+      // Redirect user or update app state as needed
+    }
+
     props.resetForm();
   };
 
