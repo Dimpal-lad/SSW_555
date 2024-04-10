@@ -6,6 +6,19 @@ import "./BrainDecorator.css";
 
 const BrainView = () => {
   const [rotationAxis, setRotationAxis] = useState(null); // State to track selected rotation axis
+  const [selectedGrids, setSelectedGrids] = useState([]);
+
+  const handleGridRotation = (grid) => {
+    setSelectedGrids((prevSelectedGrids) => {
+      if (prevSelectedGrids.includes(grid)) {
+        // Deselect Grid if already selected
+        return prevSelectedGrids.filter((selected) => selected !== grid);
+      } else {
+        // Select Grid for rotation
+        return [...prevSelectedGrids, grid];
+      }
+    });
+  };
 
   const handleAxisRotation = (axis) => {
     if (rotationAxis === axis) {
@@ -19,10 +32,10 @@ const BrainView = () => {
     <div className="container">
       <div className="brain-container">
         <Canvas>
-          <ambientLight intensity={2} />
+          <ambientLight />
           <OrbitControls />
           <Suspense fallback={null}>
-            <Brain rotationAxis={rotationAxis} />
+            <Brain rotationAxis={rotationAxis} selectedGrids={selectedGrids} />
           </Suspense>
           <Environment preset="sunset" />
         </Canvas>
@@ -46,6 +59,29 @@ const BrainView = () => {
             <button
               onClick={() => handleAxisRotation("z")}
               className={rotationAxis === "z" ? "active" : ""}
+            >
+              Z
+            </button>
+          </div>
+        </div>
+        <div className="controls">
+          <h3>Grid View</h3>
+          <div className="button-container">
+            <button
+              onClick={() => handleGridRotation("x")}
+              className={selectedGrids.includes("x") ? "active" : ""}
+            >
+              X
+            </button>
+            <button
+              onClick={() => handleGridRotation("y")}
+              className={selectedGrids.includes("y") ? "active" : ""}
+            >
+              Y
+            </button>
+            <button
+              onClick={() => handleGridRotation("z")}
+              className={selectedGrids.includes("z") ? "active" : ""}
             >
               Z
             </button>
