@@ -1,7 +1,8 @@
 import { React, Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment } from "@react-three/drei";
-import Brain from "../Brain_Visualization/Brain";
+// import Brain from "../Brain_Visualization/Brain";
+import Detectedcell from "./Detected_cell2";
 import "./BrainDecorator.css";
 
 const BrainView = () => {
@@ -21,6 +22,7 @@ const BrainView = () => {
   };
 
   const handleAxisRotation = (axis) => {
+    debugger;
     if (rotationAxis === axis) {
       setRotationAxis(null); // Deselect axis if already selected
     } else {
@@ -35,7 +37,11 @@ const BrainView = () => {
           <ambientLight />
           <OrbitControls />
           <Suspense fallback={null}>
-            <Brain rotationAxis={rotationAxis} selectedGrids={selectedGrids} />
+            {/* <Brain rotationAxis={rotationAxis} selectedGrids={selectedGrids} /> */}
+            <Detectedcell
+              rotationAxis={rotationAxis}
+              selectedGrids={selectedGrids}
+            />
           </Suspense>
           <Environment preset="sunset" />
         </Canvas>
