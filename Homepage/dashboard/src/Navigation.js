@@ -1,13 +1,28 @@
 import React from "react";
 
-function Navigation() {
+function Navigation({ isLoggedIn, setIsLoggedIn }) {
+  const handleLogout = () => {
+    // Remove authentication token from local storage
+    localStorage.removeItem("authToken");
+    setIsLoggedIn(false); // Update the authentication state
+  };
+
   return (
     <nav>
-      <button>My Profile</button>
-      <a href="/Login">
-        <button>Login</button>
-      </a>
-      <button>Logout</button> {/* Future database redirection */}
+      <ul>
+        {!isLoggedIn && (
+          <li>
+            <a href="/login">
+              <button>Login</button>
+            </a>
+          </li>
+        )}
+        {isLoggedIn && (
+          <li>
+            <button onClick={handleLogout}>Logout</button>
+          </li>
+        )}
+      </ul>
     </nav>
   );
 }

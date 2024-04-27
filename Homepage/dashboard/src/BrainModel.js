@@ -1,7 +1,6 @@
-// src/BrainModel.js
 import React from "react";
 
-function BrainModel() {
+function BrainModel({ isLoggedIn }) {
   return (
     <div id="brain-model">
       <img src={`${process.env.PUBLIC_URL}/a1.gif`} alt="Brain 3D" />
@@ -13,9 +12,11 @@ function BrainModel() {
         and sleeping problems. It can also be used to confirm brain death in a
         comatose patient.
       </p>
-      <a href="/brain-view">
-        <button>Go to Brain View</button>
-      </a>
+      {isLoggedIn && ( // Render the button only if user is logged in
+        <a href="/brain-view">
+          <button>Go to Brain View</button>
+        </a>
+      )}
     </div>
   );
 }
