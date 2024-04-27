@@ -1,23 +1,29 @@
-const app = require("express")();
+const express = require("express");
+const cors = require("cors");
+const app = express();
 const http = require("http").Server(app);
-const mongoose = require("mongoose");
 
-mongoose.connect(
-  "mongodb+srv://Dimpal_22:dimpal%402201@epilepsy.cuj9k1p.mongodb.net/"
-);
+// Enable CORS
+app.use(cors());
+app.use(express.json());
 
-const User = require("./models/userModel");
+// Load environment variables if needed
+require("dotenv").config({ path: "epilepsy.env" });
 
-async function insert() {
-  await User.create({
-    name: "Dimpal",
-    email: "abc@gmail.com",
-    password: "324@dfdf",
-  });
-}
+// Connect to MongoDB
+const connectDB = require("./connectiondb");
+connectDB();
 
-insert();
+// Import route handlers
+const signupController = require("./controllers/userController");
+const loginController = require("./controllers/loginController");
+
+// Routes
+app.post("/api/signup", signupController);
+app.post("/api/login", loginController);
 
 http.listen(3000, function () {
   console.log("Server is running");
 });
+
+app.get("/", () => {});
