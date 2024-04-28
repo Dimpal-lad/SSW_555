@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LoginSignUp.css";
 import { Form, Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import user_icon from "../Assets/person.png";
 import email_icon from "../Assets/email.png";
 import password_icon from "../Assets/password.png";
+import axios from "axios";
+import { supabase } from "./supabaseClient";
 
 const SignUp = () => {
+  const [redirectToLogin, setRedirectToLogin] = useState(false); // State to manage navigation
+  const [error, setError] = useState(""); // State to manage error message
+
   const initialValues = {
     name: "",
     emailId: "",
@@ -23,10 +28,38 @@ const SignUp = () => {
       .required("Password is required"),
   });
 
-  const onSubmit = (values, props) => {
-    console.log(values);
-    props.resetForm();
+  const onSubmit = async (values, { resetForm, setSubmitting }) => {
+    try {
+      // Make POST request to backend API
+      const response = await axios.post(
+        "http://localhost:3000/api/signup",
+        values
+      );
+      console.log(response);
+
+      console.log("Signup successful", response.data);
+
+      // Clear any previous error message
+      setError("");
+      // Reset form fields
+      resetForm();
+
+      // Set the state to navigate to the Login page after successful signup
+      setRedirectToLogin(true);
+    } catch (error) {
+      console.error("Signup error", error.response.data);
+      // Display error message to user
+      setError(error.response.data.error);
+    } finally {
+      // Set submitting state to false to enable button again
+      setSubmitting(false);
+    }
   };
+
+  // Redirect to Login page if redirectToLogin state is true
+  if (redirectToLogin) {
+    window.location.href = "/Login";
+  }
 
   return (
     <Formik
@@ -64,9 +97,17 @@ const SignUp = () => {
                 <ErrorMessage name="password" className="error" />
               </div>
             </div>
+            <div className="inputerror">
+              {error && <div className="error">{error}</div>}
+            </div>
             <div className="submit-container">
-              <button type="submit" className="submit">
-                Sign Up
+              {/* Disable button while submitting */}
+              <button
+                type="submit"
+                className="submit"
+                disabled={props.isSubmitting}
+              >
+                {props.isSubmitting ? "Signing up..." : "Sign Up"}
               </button>
               <p>
                 Already have an account?

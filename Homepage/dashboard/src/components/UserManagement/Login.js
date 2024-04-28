@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LoginSignUp.css";
 import { Form, Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import email_icon from "../Assets/email.png";
 import password_icon from "../Assets/password.png";
+import axios from "axios";
 
 const Login = () => {
   const initialValues = {
@@ -20,9 +21,28 @@ const Login = () => {
       .required("Password is required"),
   });
 
-  const onSubmit = (values, props) => {
-    console.log(values);
-    props.resetForm();
+  const [loginError, setLoginError] = useState(""); // State to hold login error message
+
+  const onSubmit = async (values, props) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/api/login",
+        values
+      ); // Make POST request to backend API for login
+
+      console.log("Login successful", response.data);
+      // Redirect user or update app state as needed
+
+      // Store authentication token in local storage
+      localStorage.setItem("authToken", response.data.token);
+
+      props.resetForm(); // Reset form fields
+      setLoginError(""); // Clear any previous login errors
+      window.location.href = "/";
+    } catch (error) {
+      console.error("Login error", error.response.data);
+      setLoginError(error.response.data.error); // Set the error message received from the server
+    }
   };
 
   return (
@@ -53,6 +73,9 @@ const Login = () => {
               <div className="inputerror">
                 <ErrorMessage name="password" className="input error" />
               </div>
+            </div>
+            <div className="inputerror">
+              {loginError && <p className="inputerror">{loginError}</p>}{" "}
             </div>
             <div className="submit-container">
               <button type="submit" className="submit">
