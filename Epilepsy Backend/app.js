@@ -22,6 +22,7 @@ const patientController = require("./controllers/patientController");
 // Routes
 app.post("/api/signup", signupController);
 app.post("/api/login", loginController);
+app.post("/api/add-patient", patientController.addPatient); // POST route for adding patient
 app.get("/api/patient-history", patientController.getAllPatientHistory); // GET route for fetching patient history
 
 http.listen(3000, function () {

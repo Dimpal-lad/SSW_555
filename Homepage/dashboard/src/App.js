@@ -3,7 +3,7 @@ import Navigation from "./Navigation";
 import BrainModel from "./BrainModel";
 import Sidebar from "./Sidebar"; // Make sure to import the Sidebar
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const App = () => {
