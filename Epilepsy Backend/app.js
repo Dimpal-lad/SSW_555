@@ -17,10 +17,12 @@ connectDB();
 // Import route handlers
 const signupController = require("./controllers/userController");
 const loginController = require("./controllers/loginController");
+const patientController = require("./controllers/patientController");
 
 // Routes
 app.post("/api/signup", signupController);
 app.post("/api/login", loginController);
+app.get("/api/patient-history", patientController.getAllPatientHistory); // GET route for fetching patient history
 
 http.listen(3000, function () {
   console.log("Server is running");

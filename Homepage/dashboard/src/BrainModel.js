@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./BrainModel.css";
 function BrainModel({ isLoggedIn }) {
   return (
     <div id="brain-model">
@@ -12,11 +12,18 @@ function BrainModel({ isLoggedIn }) {
         and sleeping problems. It can also be used to confirm brain death in a
         comatose patient.
       </p>
-      {isLoggedIn && ( // Render the button only if user is logged in
+      {/* {isLoggedIn && ( // Render the button only if user is logged in
         <a href="/brain-view">
           <button>Go to Brain View</button>
         </a>
+        
       )}
+      {isLoggedIn && ( // Render the button only if user is logged in
+        <a href="/surgeon-dashboard">
+          <button>Go to Dashboard</button>
+        </a>
+        
+      )} */}
     </div>
   );
 }

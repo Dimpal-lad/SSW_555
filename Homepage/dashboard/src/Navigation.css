@@ -1,0 +1,74 @@
+/* Navigation.css */
+nav {
+    background-color: #316371;
+    padding: 1px 0;
+    text-align: center;
+    margin-bottom: 2px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  
+  .project-title {
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .nav-items {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-items li {
+    margin-right: 10px;
+  }
+  
+  nav button {
+    background-color: #00a8cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav button:hover {
+    background-color: #007ea7;
+  }
+  
+  @media (max-width: 600px) {
+    .nav-content {
+      flex-direction: column;
+    }
+  
+    .project-title {
+      margin-bottom: 10px;
+    }
+  
+    .nav-items {
+      flex-direction: column;
+    }
+  
+    .nav-items li {
+      margin-right: 0;
+    }
+  }
+  

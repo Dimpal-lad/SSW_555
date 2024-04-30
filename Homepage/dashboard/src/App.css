@@ -37,29 +37,6 @@
   }
 }
 /* Add this to your App.css or a CSS module for BrainModel */
-
-#brain-model img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto; /* Center the image */
-}
-/* src/App.css */
-nav {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-nav button {
-  margin: 0 10px;
-  padding: 10px;
-}
-
-p {
-  text-align: center;
-  max-width: 600px;
-  margin: 20px auto;
-}
 /* src/App.css */
 body {
   margin: 0;
@@ -72,48 +49,6 @@ body {
   color: #333; /* Dark grey text */
 }
 
-nav {
-  background-color: #005792; /* Dark blue background for the navigation bar */
-  padding: 10px 0;
-  text-align: center;
-}
-
-nav button {
-  background-color: #00a8cc; /* Lighter blue for buttons */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-nav button:hover {
-  background-color: #007ea7; /* A different blue on hover */
-}
-
-#brain-model {
-  text-align: center;
-  padding: 20px;
-}
-
-#brain-model img {
-  max-width: 50%;
-  height: auto;
-  border-radius: 10px; /* Rounded corners for the image */
-}
-
-.description {
-  background-color: #ffffff; /* White background for the text box */
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for the description box */
-  max-width: 600px;
-  text-align: center;
-}
 
 /* Add any additional global styles you want here */
 /* src/App.css */
@@ -128,116 +63,7 @@ body {
   color: #333; /* Dark grey text */
 }
 
-nav {
-  background-color: #005792; /* Dark blue background for the navigation bar */
-  padding: 10px 0;
-  text-align: center;
-}
-
-nav button {
-  background-color: #00a8cc; /* Lighter blue for buttons */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-nav button:hover {
-  background-color: #007ea7; /* A different blue on hover */
-}
-
-#brain-model {
-  text-align: center;
+.main-content {
+  margin-left: 200px;  /* Adjust based on sidebar width */
   padding: 20px;
 }
-
-#brain-model img {
-  max-width: 50%;
-  height: auto;
-  border-radius: 10px; /* Rounded corners for the image */
-}
-
-.description {
-  background-color: #ffffff; /* White background for the text box */
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for the description box */
-  max-width: 600px;
-  text-align: center;
-}
-/* src/App.css */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #e0ebeb; /* A soothing sky-blue background */
-  color: #2c3e50; /* A dark shade of blue for text */
-  line-height: 1.6;
-}
-
-nav {
-  background-color: #2980b9; /* A strong blue */
-  padding: 10px 0;
-  text-align: center;
-}
-
-nav button {
-  background-color: #3498db; /* A vibrant blue */
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  margin: 0 5px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-nav button:hover {
-  background-color: #47a7f5; /* A lighter blue on hover */
-  transform: translateY(-2px); /* Slight lift */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-}
-
-#brain-model img {
-  max-width: 60%; /* Adjust as per your layout */
-  height: auto;
-  border-radius: 10px; /* Soft rounded corners for the image */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-}
-
-.description {
-  background-color: #f5f7f9; /* A light grey for contrast */
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for the description box */
-  max-width: 700px;
-  text-align: center;
-}
-
-.description p {
-  margin: 0;
-  padding: 0;
-  font-size: 18px; /* Slightly larger text for readability */
-}
-
-/* Additional global styles */
-h1, h2, h3, h4, h5, h6 {
-  color: #34495e; /* Darker shade for headings */
-}
-
-a {
-  color: #2980b9; /* Links color */
-}
-
-a:hover {
-  color: #3498db;
-  text-decoration: none;
-}
-
-/* You can add more styles here as needed */

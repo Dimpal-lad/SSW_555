@@ -1,0 +1,43 @@
+/* SurgeonDashboard.css */
+.surgeon-dashboard {
+  display: flex;
+  width: 100%;
+}
+
+.surgeon-content {
+  flex-grow: 1;
+  padding: 70px; /* Adjust as necessary */
+  margin-left: 200px; /* Ensure this is enough to not overlap with the Sidebar */
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+td {
+  text-align: left;
+}
+
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}

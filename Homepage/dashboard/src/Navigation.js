@@ -1,28 +1,32 @@
 import React from "react";
+import "./Navigation.css"; // Make sure this points to the correct CSS file
 
 function Navigation({ isLoggedIn, setIsLoggedIn }) {
+  
   const handleLogout = () => {
-    // Remove authentication token from local storage
     localStorage.removeItem("authToken");
-    setIsLoggedIn(false); // Update the authentication state
+    setIsLoggedIn(false);
   };
 
   return (
-    <nav>
-      <ul>
-        {!isLoggedIn && (
-          <li>
-            <a href="/login">
-              <button>Login</button>
-            </a>
-          </li>
-        )}
-        {isLoggedIn && (
-          <li>
-            <button onClick={handleLogout}>Logout</button>
-          </li>
-        )}
-      </ul>
+    <nav className="navigation-bar">
+      <div className="nav-content">
+        <div className="project-title">Epiprep: Epilepsy Brain Model</div>
+        <ul className="nav-items">
+          {!isLoggedIn && (
+            <li>
+              <a href="/login">
+                <button>Login</button>
+              </a>
+            </li>
+          )}
+          {isLoggedIn && (
+            <li>
+              <button onClick={handleLogout}>Logout</button>
+            </li>
+          )}
+        </ul>
+      </div>
     </nav>
   );
 }
