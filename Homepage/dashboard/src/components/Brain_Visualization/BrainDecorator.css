@@ -11,19 +11,12 @@
     width: 600px;
   }
   
-
   .controls-container {
-    flex: 1; 
+    width: 300px; /* Adjust width as needed */
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
-  /* .controls-container {
-    width: 300px; /* Adjust width as needed */
-    /* display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  } */ 
   
   .controls {
     width: 250px; /* Adjust width as needed */
@@ -38,17 +31,12 @@
     text-align: center;
   }
   
-  /* .button-container {
+  .button-container {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-  } */
-  .button-container {
-    display: flex;
-    justify-content: flex-end; 
-    margin-top: 10px;
   }
-
+  
   .controls button {
     flex: 1;
     margin: 5px;
