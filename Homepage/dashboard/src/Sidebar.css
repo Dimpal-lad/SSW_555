@@ -1,0 +1,44 @@
+/* sidebar.css */
+.sidebar {
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 65px;
+  bottom: 0;
+  transition: all 0.3s ease;
+  background-color: #316371;
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(255, 255, 255, 0.986);
+  z-index: 999;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 8px 16px;
+  color: aliceblue; /* Ensuring all non-active links are aliceblue */
+}
+
+a {
+  color: white; /* Sets all link text to white */
+  text-decoration: none; /* Removes underline from links */
+}
+
+a.active {
+  font-weight: bold; /* Makes the active link bold */
+  color: yellow; /* Changes the active link color to yellow for visibility */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100px; /* Smaller sidebar for smaller screens */
+  }
+
+  li {
+    padding: 4px 8px; /* Smaller padding for items */
+  }
+}

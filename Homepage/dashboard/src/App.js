@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Navigation from "./Navigation";
 import BrainModel from "./BrainModel";
-import "./App.css"; // Make sure you have this file for CSS
+import Sidebar from "./Sidebar"; // Make sure to import the Sidebar
+import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track user's authentication status
@@ -15,9 +18,16 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <Navigation isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-      <BrainModel isLoggedIn={isLoggedIn} />
+    <div className="App" >
+  
+      <div >
+        <Navigation isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+        <BrainModel isLoggedIn={isLoggedIn} />
+        <Sidebar isLoggedIn={isLoggedIn}/> 
+        
+
+      </div>
+      
     </div>
   );
 };
