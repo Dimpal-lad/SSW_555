@@ -10,6 +10,12 @@
   margin-left: 200px; /* Ensure this is enough to not overlap with the Sidebar */
   font-weight: 600;
 }
+.header-with-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Adds some space below the header */
+}
 
 table {
   width: 100%;
